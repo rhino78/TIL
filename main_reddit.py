@@ -14,7 +14,7 @@ def main():
     logging.basicConfig(filename='/home/ryan/github/TIL/tweet.log', level=logging.INFO)
     st = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
     logging.info('Tweet log for: ' + st)
-    r = praw.Reddit(client_d=tweet_creds.CLIENT_ID,
+    r = praw.Reddit(client_id=tweet_creds.CLIENT_ID,
                     client_secret=tweet_creds.CLIENT_SECRET,
                     password=tweet_creds.PASSWORD,
                     user_agent=tweet_creds.USER_AGENT,
